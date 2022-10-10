@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-image: url("/img/fondo.jpg");
   background-repeat: no-repeat;
@@ -16,10 +22,12 @@ body {
   grid-column-end: right-side;
   grid-row-start: title;
   grid-row-end: piano;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .titol {
-  text-align: center;
   font-size: 90px;
 }
 
@@ -30,4 +38,5 @@ body {
   grid-row-start: piano;
   grid-row-end: cercador;
   background-image: linear-gradient(white, black);
+  display: flex;
 }
