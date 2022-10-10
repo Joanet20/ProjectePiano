@@ -1,0 +1,33 @@
+body {
+  background-image: url("/img/fondo.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.estructura {
+  display: grid;
+  grid-template-columns: [left-side] 10% [objectes] 80% [right-side] 10%;
+  grid-template-rows: [title] 150px [piano] 30% [cercador] 40%;
+}
+
+.titol-cont {
+  display: grid;
+  grid-column-start: objectes;
+  grid-column-end: right-side;
+  grid-row-start: title;
+  grid-row-end: piano;
+}
+
+.titol {
+  text-align: center;
+  font-size: 90px;
+}
+
+.tecles {
+  display: grid;
+  grid-column-start: objectes;
+  grid-column-end: right-side;
+  grid-row-start: piano;
+  grid-row-end: cercador;
+  background-image: linear-gradient(white, black);
+}
