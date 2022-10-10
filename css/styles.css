@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  list-style: none;
 }
 
 body {
@@ -13,7 +14,7 @@ body {
 .estructura {
   display: grid;
   grid-template-columns: [left-side] 10% [objectes] 80% [right-side] 10%;
-  grid-template-rows: [title] 150px [piano] 30% [cercador] 40%;
+  grid-template-rows: [title] 150px [piano] 500px [cercador] 40%;
 }
 
 .titol-cont {
@@ -38,5 +39,33 @@ body {
   grid-row-start: piano;
   grid-row-end: cercador;
   background-image: linear-gradient(white, black);
+}
+
+.llista {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 40px;
+  height: 70px;
+}
+
+.tecla1 {
+  background-color: white;
+  border: solid black 3px;
+  position: absolute;
+  width: 50px;
+  height: 450px;
+  top: 10px;
+  left: 10px;
+}
+
+.tecla2 {
+  background-color: red;
+  border: solid black 3px;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 10px;
+  left: 60px;
 }
