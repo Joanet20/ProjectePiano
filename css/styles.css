@@ -14,7 +14,7 @@ body {
 .estructura {
   display: grid;
   grid-template-columns: [left-side] 10% [objectes] 80% [right-side] 10%;
-  grid-template-rows: [title] 150px [piano] 500px [cercador] 40%;
+  grid-template-rows: [title] 150px [piano] 500px [cercador] auto [ending];
 }
 
 .titol-cont {
@@ -49,34 +49,70 @@ body {
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: [left-side] 10% [tecla1] 10% [tecla2] 10% [tecla3] 10% [tecla4] 10% [tecla5] 10% [tecla6] 10% [tecla7] 10% [tecla8] 10% [right-side] 10%;
+  grid-template-columns: [left-side] 10% [tecla1] 7% [tecla2] 7% [tecla3] 7% [tecla4] 7% [tecla5] 7% [tecla6] 7% [tecla7] 7% [tecla8] 7% [right-side] 10%;
 }
 
 .tecla1 {
   background-color: white;
-  border: solid black 3px;
+  border: solid gray 1px;
+  box-shadow: 2px 3px;
+  border-radius: 5px;
   position: absolute;
-  width: 90%;
+  width: 100%;
   height: 90%;
+  grid-column-start: tecla1;
+  grid-column-end: tecla2;
+}
+
+.tecla1_2 {
+  background-color: black;
+  border: solid gray 1px;
+  box-shadow: 2px 3px;
+  border-radius: 5px;
+  position: absolute;
+  top: 5%;
+  left: 75%;
+  width: 45%;
+  height: 50%;
+  z-index: 1;
   grid-column-start: tecla1;
   grid-column-end: tecla2;
 }
 
 .tecla2 {
   background-color: white;
-  border: solid black 3px;
+  border: solid gray 1px;
+  box-shadow: 2px 3px;
+  border-radius: 5px;
   position: absolute;
-  width: 90%;
+  width: 100%;
   height: 90%;
   grid-column-start: tecla2;
   grid-column-end: tecla3;
 }
 
+.tecla2_3 {
+  background-color: black;
+  border: solid gray 1px;
+  box-shadow: 2px 3px;
+  border-radius: 5px;
+  position: absolute;
+  top: 5%;
+  left: 175%;
+  width: 45%;
+  height: 50%;
+  z-index: 1;
+  grid-column-start: tecla1;
+  grid-column-end: tecla2;
+}
+
 .tecla3 {
   background-color: white;
-  border: solid black 3px;
+  border: solid gray 1px;
+  box-shadow: 2px 3px;
+  border-radius: 5px;
   position: absolute;
-  width: 90%;
+  width: 100%;
   height: 90%;
   grid-column-start: tecla3;
   grid-column-end: tecla4;
@@ -84,10 +120,182 @@ body {
 
 .tecla4 {
   background-color: white;
-  border: solid black 3px;
+  border: solid gray 1px;
+  box-shadow: 2px 3px;
+  border-radius: 5px;
   position: absolute;
-  width: 90%;
+  width: 100%;
   height: 90%;
   grid-column-start: tecla4;
   grid-column-end: tecla5;
+}
+
+.tecla4_5 {
+  background-color: black;
+  border: solid gray 1px;
+  box-shadow: 2px 3px;
+  border-radius: 5px;
+  position: absolute;
+  top: 5%;
+  left: 375%;
+  width: 45%;
+  height: 50%;
+  z-index: 1;
+  grid-column-start: tecla1;
+  grid-column-end: tecla2;
+}
+
+.tecla5 {
+  background-color: white;
+  border: solid gray 1px;
+  box-shadow: 2px 3px;
+  border-radius: 5px;
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  grid-column-start: tecla5;
+  grid-column-end: tecla6;
+}
+
+.tecla5_6 {
+  background-color: black;
+  border: solid gray 1px;
+  box-shadow: 2px 3px;
+  border-radius: 5px;
+  position: absolute;
+  top: 5%;
+  left: 475%;
+  width: 45%;
+  height: 50%;
+  z-index: 1;
+  grid-column-start: tecla1;
+  grid-column-end: tecla2;
+}
+
+.tecla6 {
+  background-color: white;
+  border: solid gray 1px;
+  box-shadow: 2px 3px;
+  border-radius: 5px;
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  grid-column-start: tecla6;
+  grid-column-end: tecla7;
+}
+
+.tecla6_7 {
+  background-color: black;
+  border: solid gray 1px;
+  box-shadow: 2px 3px;
+  border-radius: 5px;
+  position: absolute;
+  top: 5%;
+  left: 575%;
+  width: 45%;
+  height: 50%;
+  z-index: 1;
+  grid-column-start: tecla1;
+  grid-column-end: tecla2;
+}
+
+.tecla7 {
+  background-color: white;
+  border: solid gray 1px;
+  box-shadow: 2px 3px;
+  border-radius: 5px;
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  grid-column-start: tecla7;
+  grid-column-end: tecla8;
+}
+
+.tecla8 {
+  background-color: white;
+  border: solid gray 1px;
+  box-shadow: 2px 3px;
+  border-radius: 5px;
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  grid-column-start: tecla8;
+  grid-column-end: right-side;
+}
+
+.searcher {
+  display: grid;
+  grid-column-start: objectes;
+  grid-column-end: right-side;
+  grid-row-start: cercador;
+  grid-row-end: ending;
+  grid-template-columns: [left-side] 30% [objectes] 40% [right-side] 30%;
+  grid-template-rows: [starter] 50px [cerca] auto [result] auto [ending] 150px;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.cerca {
+  grid-column-start: objectes;
+  grid-column-end: right-side;
+  grid-row-start: cerca;
+  grid-row-end: result;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.notes {
+  padding-top: 20px;
+}
+
+.delete {
+  background-color: red;
+  border: none;
+  border-radius: 5px;
+  margin-top: 15px;
+  padding: 10px;
+  box-shadow: 1px 1px gray;
+  align-self: center;
+  font-size: 20px;
+  color: white;
+}
+
+.resultats {
+  grid-column-start: objectes;
+  grid-column-end: right-side;
+  grid-row-start: result;
+  grid-row-end: ending;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.res {
+  display: grid;
+  grid-template-columns: [canco] 50% [button] 50% [endingC];
+  grid-template-rows: [nom] auto [lletra] auto [ending];
+}
+
+.titCanco {
+  grid-column-start: canco;
+  grid-column-end: button;
+  grid-row-start: nom;
+  grid-row-end: lletra;
+}
+
+.let {
+  grid-column-start: canco;
+  grid-column-end: button;
+  grid-row-start: lletra;
+  grid-row-end: ending;
+}
+
+.reprod {
+  grid-column-start: button;
+  grid-column-end: endingC;
+  grid-row-start: nom;
+  grid-row-end: ending;
 }
